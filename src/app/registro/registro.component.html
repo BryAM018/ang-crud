@@ -1,0 +1,44 @@
+    <div class="suscribete">
+        <form action="#" target="" method="get" name="fvalidad">
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/><br>
+        
+            <label for="apellidos">Apellido</label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="Escribe tu Apellido"/>
+            <br>
+    
+            <label for="sexo">Sexo:</label><br>
+            <label for="">Hombre</label>
+            <input type="radio" name="hm" value="h" > 
+            <label for="">Mujer</label>
+            <input type="radio" name="hm" value="m" > 
+            <br>
+            <label for="fecha">Fecha de Nacimiento: </label> <input type="date" name="fecha"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Correo Electronico" required /><br>
+            <label for="mensaje">Contraseña:</label> <input type="password" name="password" placeholder="******" required pattern="[A-Za-z0-9]{5,40}"
+            title="Letras y números. Tamaño mínimo: 6. Tamaño máximo: 40">
+            <label for="mensaje"> Confirmar Contraseña:</label> <input type="password" name="password2" minlength="6" placeholder="******">
+            <label for="ntelefono">Numero de telefono:</label>
+            <input type="number" name="telefono" size="20" placeholder="Celular"/><br>
+            <label for="range">Nivel:</label>
+            <select name="menu">
+                <option value="0">...</option>
+                <option value="1">Uno</option>
+                <option value="2">Dos</option>
+                <option value="3">Tres</option>
+                <option value="4">Cuatro</option>
+                <option value="5">Cinco</option>
+                <option value="6">Seis</option>
+                <option value="7">Siete</option>
+                <option value="8">Ocho</option>
+                <option value="9">Nueve</option>
+              </select><br>
+              <label for=""><input type="checkbox" id="activador">
+                Terminos y condiciones
+              </label>
+              
+            <input type="submit" name="enviar" value="Registar"/>    
+        </form>
+    </div>

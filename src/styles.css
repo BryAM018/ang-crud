@@ -1,1 +1,238 @@
+body{
+    background-color:turquoise;
+}
+*{
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+form{   
+  width:500px;
+  padding:20px 10px 10px;
+  border-radius:8px;
+  margin: 10% 30%;
+  background-color:rgb(209, 205, 199);
+  font-size: medium;
+  }
+
+  form a{
+    align-content: center;
+    padding-left: 30%;
+}
+
+form input[type="email"],form input[type="password"],form input[type="number"]{
+width:430px;
+padding:4px 10px;
+border:2px solid #f6f6f6;
+border-radius:3px;
+background-color:#f6f6f6;
+margin:10px ;
+display:inline-block;
+}
+
+form input[type="submit"] , input[type="reset"]{
+    width:100%;
+    padding:8px 16px;
+    margin-top:9px;
+    border:1px solid #000;
+    border-radius:5px;
+    display:block;
+    color:var(--limon);
+    background-color:aqua;
+} 
+
+
+form input[type="text"]{
+  width:430px;
+  padding:4px 10px;
+  border:2px solid #f6f6f6;
+  border-radius:3px;
+  background-color:#f6f6f6;
+  margin:10px ;
+  display:inline-block;
+}
+form input[type="date"]{
+  
+padding:6px 15px;
+  border:1px solid #f6f6f6;
+border-radius:5px;
+background-color:#f6f6f6;
+  margin:10px 0;
+}
+form input[type="radio"]{
+  border-radius:5px;
+  border:1px solid #f6f6f6;
+  margin: 10px;
+  display:inline-block;
+  border: 10px;
+}
+
+div li{
+  margin: 5%;
+  display: block;
+  text-decoration: none;
+
+  
+}
+
+
+.container{    width:500px;
+  padding:20px 10px 10px;
+  border-radius:8px;
+  margin: 10% 30%;
+  background-color:rgb(209, 205, 199);
+  font-size: medium;
+}
+
+header{
+  box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 75%;
+  text-align: end;
+  padding: 10px;
+  margin: auto;
+}
+samp{
+  text-align: start;
+  
+}
+div span{
+  margin: 2px;
+  border: #333;
+}
+
+header .navbar a{
+  font-size: 1.4rem;
+  margin-left: 2rem;
+
+}
+
+.inicio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .4rem 3rem;
+  border-radius: 5rem;
+  background-color: greenyellow;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: o .5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  transition: all .4s linear;
+}
+.btn:hover{
+  transform: scale(1.1);
+  background-color: darkolivegreen;
+}
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+ 
+  a,
+  a:visited,
+  a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #000000;
+  }
+
+ 
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+  }
+
+  
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
