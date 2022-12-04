@@ -13,6 +13,7 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
+import { RecuperarComponent } from './recuperar/recuperar.component';
 
 
 const appRoutes:Routes=[
@@ -20,7 +21,8 @@ const appRoutes:Routes=[
   {path:'Horarios',component:GestorComponent},
   {path:'Inicio',component:HomeComponent},
   {path:'Registar',component:RegistroComponent},
-  {path:'Iniciar',component:LoginComponent}
+  {path:'Iniciar',component:LoginComponent},
+  {path:'Recuperar',component:RecuperarComponent}
 ];
 
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes:Routes=[
     laboratoriosComponent,
     HomeComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    RecuperarComponent
   ],
   imports: [
     BrowserModule,

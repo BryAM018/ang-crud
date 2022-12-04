@@ -17,11 +17,12 @@ laboratorios:laboratorio[]=[
   
 ];
 employeeArray: laboratorio [] = [
-  {id: 1, name: 'Ryan', evento: 'USA',profesor:'Jilafares',laboratorio:'NUmero 1'},
+  {id: 1, evento: 'USA',profesor:'Jilafares',laboratorio:'NUmero 1'},
+  {id: 2, evento: 'Limpieza',profesor:'Mendoza',laboratorio:'NUmero 2'},
 
 ];
 
-selectedEmployee: laboratorio  = {id:0, name: '', evento: '',profesor:'',laboratorio:'',};
+selectedEmployee: laboratorio  = {id:0, evento: '',profesor:'',laboratorio:'',};
 
 openForEdit(employee: laboratorio ): void 
 {
@@ -35,7 +36,7 @@ addOrEdit(): void
     this.selectedEmployee.id = this.employeeArray.length + 1;
     this.employeeArray.push(this.selectedEmployee);
   }
-  this.selectedEmployee = {id:0, name: '', evento: '',profesor:'',laboratorio:''};
+  this.selectedEmployee = {id:0, evento: '',profesor:'',laboratorio:''};
 }
 
 delete(): void 
@@ -43,7 +44,7 @@ delete(): void
   if(confirm('Are you sure you want to delete it?'))
   {
     this.employeeArray = this.employeeArray.filter(x => x != this.selectedEmployee);
-    this.selectedEmployee = {id:0, name: '', evento: '',profesor:'',laboratorio:''};
+    this.selectedEmployee = {id:0, evento: '',profesor:'',laboratorio:''};
   }
 }
 }

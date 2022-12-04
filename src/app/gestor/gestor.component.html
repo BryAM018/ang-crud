@@ -5,14 +5,17 @@
               <h1>
                 Eventos
               </h1>
-              <br>
-              <li 
-              *ngFor="let employee of employeeArray"
-              class="list-group-item list-group-item-action"
-              (click)="openForEdit(employee)"
-              [class.active]="employee == selectedEmployee"
-              >
-              <span class="badge badge-primary">{{employee.id}}</span> - {{ employee.name }} - {{employee.evento}}- {{employee.profesor}}- {{employee.laboratorio}}
-            </div>
+              <table>
+                <li 
+                *ngFor="let employee of employeeArray"
+                class="list-group-item list-group-item-action"
+                (click)="openForEdit(employee)"
+                [class.active]="employee == selectedEmployee"
+                >
+                <span class="badge badge-primary">{{employee.id}}</span> - {{employee.evento}}- {{employee.profesor}}- {{employee.laboratorio}}
+            
+              </table>
+             
+           </div>
           </div>
         </div>
