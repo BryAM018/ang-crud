@@ -22,7 +22,8 @@ const appRoutes:Routes=[
   {path:'Inicio',component:HomeComponent},
   {path:'Registar',component:RegistroComponent},
   {path:'Iniciar',component:LoginComponent},
-  {path:'Recuperar',component:RecuperarComponent}
+  {path:'Recuperar',component:RecuperarComponent},
+  {path:'Detalles',component:XyzComponent}
 ];
 
 @NgModule({

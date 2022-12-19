@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./xyz.component.css']
 })
 export class XyzComponent {
-
+}
+declare global {
+  var parseXml:(xmlStr:string)=>{}
 }
