@@ -15,7 +15,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 
-
+import { HttpClientModule } from '@angular/common/http'; 
 const appRoutes:Routes=[
   {path:'Reservas',component:laboratoriosComponent},
   {path:'Horarios',component:GestorComponent},
@@ -41,7 +41,8 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

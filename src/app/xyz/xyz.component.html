@@ -1,60 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id='content'>
+        <table id='books' cellpadding='10px' style="text-align:left;">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>                
+            </thead>
+            <tbody>
 
-    <!--JavaScript-->
-    <script>
-        function loadXMLDoc() {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-  
-                // Request finished and response 
-                // is ready and Status is "OK"
-                if (this.readyState == 4 && this.status == 200) {
-                    empDetails(this);
-                }
-            };
-  
-            // employee.xml is the external xml file
-            xmlhttp.open("GET", "employee.xml", true);
-            xmlhttp.send();
-        }
-  
-        function empDetails(xml) {
-            var i;
-            var xmlDoc = xml.responseXML;
-            var table =
-                `<tr><th>Firstname</th><th>Lastname</th>
-                    <th>Title</th><th>Division</th>
-                    <th>Building</th><th>Room</th>
-                </tr>`;
-            var x = xmlDoc.getElementsByTagName("employee");
-  
-            // Start to fetch the data by using TagName 
-            for (i = 0; i < x.length; i++) {
-                table += "<tr><td>" +
-                    x[i].getElementsByTagName("firstname")[0]
-                    .childNodes[0].nodeValue + "</td><td>" +
-                    x[i].getElementsByTagName("lastname")[0]
-                    .childNodes[0].nodeValue + "</td><td>" +
-                    x[i].getElementsByTagName("title")[0]
-                    .childNodes[0].nodeValue + "</td><td>" +
-                    x[i].getElementsByTagName("division")[0]
-                    .childNodes[0].nodeValue + "</td><td>" +
-                    x[i].getElementsByTagName("building")[0]
-                    .childNodes[0].nodeValue + "</td><td>" +
-                    x[i].getElementsByTagName("room")[0]
-                    .childNodes[0].nodeValue + "</td></tr>";
-            }
-  
-            // Print the xml data in table form
-            document.getElementById("id").innerHTML = table;
-        }
-    </script>
+            </tbody>
+        </table>
+    </div>
 
-  
+    <script>
+        let xmlContent = '';
+        let tableBooks = document.getElementById('books');
+        fetch('books.xml').then((response)=> {
+            response.text().then((xml)=>{
+                xmlContent = xml;
 
-        <button type="button" class="button" 
-            onclick="loadXMLDoc()">
-            Get Employees Details
-        </button>
-      
-    <br><br>
-    <table id="id"></table>
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                let books = xmlDOM.querySelectorAll('book');
+
+                books.forEach(bookXmlNode => {
+
+                    let row = document.createElement('tr');
+
+                    //author
+                    let td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+
+                    //  title
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[1].innerHTML;
+                    row.appendChild(td);
+                    
+                    //price
+                    td = document.createElement('td');
+                    td.innerText = '$ ' + bookXmlNode.children[3].innerHTML;
+                    row.appendChild(td);
+
+                    //description
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[5].innerHTML;
+                    row.appendChild(td);
+
+                    tableBooks.children[1].appendChild(row);
+                    
+                });
+                
+            });
+        });    
+    </script>
+</body>
+</html>

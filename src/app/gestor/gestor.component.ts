@@ -19,6 +19,7 @@ laboratorios:laboratorio[]=[
 employeeArray: laboratorio [] = [
   {id: 1, evento: 'USA',profesor:'Jilafares',laboratorio:'NUmero 1'},
   {id: 2, evento: 'Limpieza',profesor:'Mendoza',laboratorio:'NUmero 2'},
+  {id: 3, evento: 'Actualizacion',profesor:'ANdriana',laboratorio:'NUmero 3'}
 
 ];
 
