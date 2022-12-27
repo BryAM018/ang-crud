@@ -3,16 +3,18 @@ import { Component, Input  } from "@angular/core";
 import { laboratorio } from "./laboratorios.model";
 
 
+
 @Component({
     selector:"app-laboratorios",
     templateUrl:"./laboratorios.component.html",
     styleUrls: ['./laboratorio.component.css']
 
 })
+
+
 export class laboratoriosComponent{
     employeeArray: laboratorio [] = [
         {id: 1, evento: 'USA',profesor:'Jilafares',laboratorio:'NUmero 1'},
-
       ];
     
       selectedEmployee: laboratorio  = {id:0, evento: '',profesor:'',laboratorio:'',};
@@ -20,6 +22,7 @@ export class laboratoriosComponent{
       openForEdit(employee: laboratorio ): void 
       {
         this.selectedEmployee = employee;
+        localStorage.setItem ("employee",JSON.stringify(employee));
       }
     
       addOrEdit(): void
