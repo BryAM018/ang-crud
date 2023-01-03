@@ -1,3 +1,6 @@
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+
 body{
     background-color:turquoise;
 }
@@ -13,7 +16,7 @@ section{
 }
 
 
-form{   
+form{
   width:500px;
   padding:20px 10px 10px;
   border-radius:8px;
@@ -46,7 +49,7 @@ form input[type="submit"] , input[type="reset"]{
     display:block;
     color:var(--limon);
     background-color:aqua;
-} 
+}
 
 input[type="text"]{
   width:430px;
@@ -67,7 +70,7 @@ form input[type="text"]{
   display:inline-block;
 }
 form input[type="date"]{
-  
+
 padding:6px 15px;
   border:1px solid #f6f6f6;
 border-radius:5px;
@@ -87,7 +90,7 @@ div li{
   display: block;
   text-decoration: none;
 
-  
+
 }
 table{
   margin: auto;
@@ -96,7 +99,7 @@ table{
   padding: 0px;;
   border: 3px solid;
  font-size: medium;
- background-color: lightgray; 
+ background-color: lightgray;
  height: auto;
   border: 1px solid ;
 }
@@ -119,7 +122,7 @@ header{
 }
 samp{
   text-align: start;
-  
+
 }
 div span{
   margin: 2px;
@@ -208,7 +211,7 @@ header .navbar a{
   }
 
 
- 
+
   a,
   a:visited,
   a:hover {
@@ -220,7 +223,7 @@ header .navbar a{
     color: #000000;
   }
 
- 
+
 
   footer {
     margin-top: 8px;
@@ -232,7 +235,7 @@ header .navbar a{
     display: flex;
   }
 
-  
+
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {

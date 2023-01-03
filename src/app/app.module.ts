@@ -14,8 +14,12 @@ import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
-import { HttpClientModule } from '@angular/common/http'; 
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 const appRoutes:Routes=[
   {path:'Reservas',component:laboratoriosComponent},
   {path:'Horarios',component:GestorComponent},
@@ -42,9 +46,16 @@ const appRoutes:Routes=[
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule  
+    HttpClientModule,
+    NgbModalModule,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
