@@ -21,6 +21,8 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { initializeApp } from "firebase/app";
 import { environment } from 'src/environments/environment';
 
+import { ToastrModule } from 'ngx-toastr';
+
 const appRoutes:Routes=[
   {path:'',redirectTo:'Inicio',pathMatch:'full'},
   {path:'Inicio',component:HomeComponent},
@@ -56,7 +58,8 @@ const appRoutes:Routes=[
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ToastrModule
   ],
   providers: [],
   bootstrap: [AppComponent]
