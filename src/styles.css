@@ -2,7 +2,7 @@
 
 
 body{
-    background-color:turquoise;
+    background-color:lightblue;
 }
 *{
   font-family: sans-serif;
@@ -21,14 +21,10 @@ form{
   padding:20px 10px 10px;
   border-radius:8px;
   margin: 10% 30%;
-  background-color:rgb(209, 205, 199);
+  background-color:turquoise;
   font-size: medium;
   }
 
-  form a{
-    align-content: center;
-    padding-left: 30%;
-}
 
 form input[type="email"],form input[type="password"],form input[type="number"]{
 width:430px;
@@ -84,7 +80,18 @@ form input[type="radio"]{
   display:inline-block;
   border: 10px;
 }
-
+p{
+    text-align: center;
+  margin: 2%;
+  }
+  
+  
+  form a{
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
 div li{
   margin: 5%;
   display: block;
@@ -140,7 +147,7 @@ header .navbar a{
   align-items: center;
   justify-content: center;
   background-size: cover;
-  background-image: linear-gradient(to top, rgba(132, 250, 175, 0.445) 0%, rgba(143, 210, 244, 0.507) 100%),url(./assets/laboratorio.jpg);
+  background-image: linear-gradient(to top, rgba(132, 250, 175, 0.445) 0%, rgba(143, 210, 244, 0.507) 100%),url(./assets/img/laboratorio.jpg);
 }
 
 

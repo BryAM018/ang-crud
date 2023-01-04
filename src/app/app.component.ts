@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
  
 import { laboratorio } from './laboratorio/laboratorios.model';
 import { AppModule } from '../app/app.module';
 import { GestorComponent } from './gestor/gestor.component';
 import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 import * as xmlrpc from 'xmlrpc';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 
