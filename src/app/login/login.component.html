@@ -1,15 +1,26 @@
 <div>
-    <form action="#" target="" method="get" name="formDatosPersonales" id="formulario">
-   
-          <label for="email"><img src="svg/fi-ss-user.svg" alt=""></label>
-           <input type="email" name="email" id="email" placeholder="Correo Electronico" required /><br>
-           <label for="mensaje"><img src="svg/fi-ss-lock.svg" alt=""></label> 
-           <input type="password" name="password" id="password" minlength="6" placeholder="******" required>
-           <a href="/Recuperar">Recuperar contraseña</a>
+    <form action="#" target="" method="get" id="formulario" [formGroup]="myForm" (ngSubmit)="submitFormulario()">
+
+      <div>
+        <label for="email">Correo Electronico</label>
+           <input formControlName="usuario" type="email" name="email" id="email" [class.is-invalid]="f.usuario.errors && f.usuario.touched" placeholder="Correo Electronico" required /><br>
+
+           <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Usuario obligatorio
+          </div>
+      </div>
+      <div>
+        <label for="mensaje">Contraseña</label>
+        <input formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" type="password" name="password" id="password" minlength="6" placeholder="******" required>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          contraseña obligatoria
+        </div>
+      </div>
+                     <a href="/Recuperar">Recuperar contraseña</a>
+
            <input type="reset" value="Borrar" name="">
-           <input type="submit" value="Ingresar"/>
-           
+          <input type="submit" value="Ingresar"/>
+
        </form>
   </div>
   <router-outlet></router-outlet>
-   

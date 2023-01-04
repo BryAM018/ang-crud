@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { laboratorio } from '../laboratorio/laboratorios.model';
 import { GestorComponent } from '../gestor/gestor.component';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +9,31 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  public myFrom!:FormGroup;
+  public myForm!:FormGroup;
   constructor(private fb:FormBuilder){
 
   }
 ngOnInit():void{
-  this.myFrom=this.createMyFrom();
+  this.myForm=this.createMyFrom();
 }
 private createMyFrom():FormGroup{
   return this.fb.group({
-    usuario:[],
-    password:[]
+    usuario:['',[Validators.required]],
+    password:['',[Validators.required]]
   })
+}
+
+public submitFormulario(){
+  if(this.myForm.invalid){
+      Object.values(this.myForm.controls).forEach(control=>{
+        control.markAllAsTouched();
+      });
+      return;
+  }
+
+}
+
+public get f():any{
+  return this.myForm.controls;
 }
 }
