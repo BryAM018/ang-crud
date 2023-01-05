@@ -8,7 +8,6 @@ import { RegistroComponent } from './registro/registro.component';
 import * as xmlrpc from 'xmlrpc';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 
-
 declare global {
   var parseXml:(xmlStr:string)=>{}
 }

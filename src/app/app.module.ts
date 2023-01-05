@@ -26,9 +26,9 @@ import { ToastrModule } from 'ngx-toastr';
 const appRoutes:Routes=[
   {path:'',redirectTo:'Inicio',pathMatch:'full'},
   {path:'Inicio',component:HomeComponent},
-  {path:'Horarios',component:GestorComponent}, 
-  {path:'Registrar',component:RegistroComponent},
   {path:'Iniciar',component:LoginComponent},
+  {path:'Registro',component:RegistroComponent},
+  {path:'Horarios',component:GestorComponent}, 
   {path:'Reservas',component:laboratoriosComponent},
   {path:'Recuperar',component:RecuperarComponent},
   {path:'Detalles',component:XyzComponent}
