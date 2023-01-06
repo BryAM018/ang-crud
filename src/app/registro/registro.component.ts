@@ -21,6 +21,10 @@ export class RegistroComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       repetirPassword: ['', Validators.required],
+      terms: [false, Validators.requiredTrue],
+      date: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]+$/)]],
+      apellido: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]+$/)]],
     });
   }
   

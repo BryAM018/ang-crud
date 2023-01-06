@@ -272,3 +272,7 @@ header .navbar a{
       visibility: hidden;
     }
   }
+
+  input.form-control{
+    border: solid 1px tomato;
+  }

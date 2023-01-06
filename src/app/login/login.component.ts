@@ -21,12 +21,14 @@ private createMyFrom():FormGroup{
   return this.fb.group({
     usuario:['',[Validators.required],Validators.email],
     password:['',[Validators.required]]
+    
   })
 }
 
 public submitFormulario(){
     const email = this.myForm.value.email;
     const password = this.myForm.value.password;
+    
 
     this.loading = true;
     this.afAuth.signInWithEmailAndPassword(email, password).then((user) => {

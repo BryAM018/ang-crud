@@ -13,15 +13,17 @@ import { laboratorio } from "./laboratorios.model";
 
 
 export class laboratoriosComponent{
-    employeeArray: laboratorio [] = [
-        {id: 1, evento: 'USA',profesor:'Jilafares',laboratorio:'NUmero 1'},
-        
-      ];
-      selectedEmployee: laboratorio  = {id:0, evento: '',profesor:'',laboratorio:'',};
     
+    employeeArray: laboratorio [] = [
+      ];
+
+      selectedEmployee: laboratorio  = {id:0, evento: '',profesor:'',laboratorio:'',};
+      
       openForEdit(employee: laboratorio ): void 
       {
-        localStorage.setItem ("laboratorio",JSON.stringify(employee));
+        localStorage.setItem('miArray', JSON.stringify(this.employeeArray));
+        const arrayString = localStorage.getItem('miArray');
+        localStorage.setItem("laboratorio",JSON.stringify(employee));
         this.selectedEmployee = employee;
        
 

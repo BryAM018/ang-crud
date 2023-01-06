@@ -1,7 +1,6 @@
 <div class="container">
-  <div class="row">
+
     <div class="col-md-8 mt-4">
-      <ul class="list-group">
         <div class="card mt-4">
           <div class="card-body">
               <div class="card-title">
@@ -29,15 +28,15 @@
        
           </div>
         </div>
-          <li 
-        *ngFor="let employee of employeeArray"
-        class="list-group-item list-group-item-action"
-        (click)="openForEdit(employee)"
-        [class.active]="employee == selectedEmployee"
-        >
-        <span class="badge badge-primary">{{employee.id}}</span>  - {{employee.evento}}- {{employee.profesor}}- {{employee.laboratorio}}
-      </li>
-      </ul>
     </div>
-  </div>
+  
+  <div class="row">
+<div>
+    <li *ngFor="let employee of employeeArray"
+    class="list-group-item list-group-item-action"
+    (click)="openForEdit(employee)"
+    [class.active]="employee == selectedEmployee" >
+    <span class="badge badge-primary">{{employee.id}}</span>  - {{employee.evento}}- {{employee.profesor}}- {{employee.laboratorio}}
+  </li>
+</div>
 </div>
